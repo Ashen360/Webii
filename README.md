@@ -125,20 +125,10 @@ webii/
 │   └── mediapipe/          WASM + hand model (gitignored, generated)
 ├── tests/                  Vitest unit tests and fixture photos
 ├── tools/                  verify.html + verify.ts — run the tracker over fixture photos
-├── docs/                   SEED, PROJECT, PROGRESS, HANDOFF
 ├── index.html
 ├── vite.config.ts
 └── package.json
 ```
-
-## Documentation
-
-| Document | Contents |
-|----------|----------|
-| [docs/SEED.md](docs/SEED.md) | Product specification |
-| [docs/PROJECT.md](docs/PROJECT.md) | Architecture, technology choices, and decisions |
-| [docs/PROGRESS.md](docs/PROGRESS.md) | Phase-by-phase log and validation rounds |
-| [docs/HANDOFF.md](docs/HANDOFF.md) | Handover notes |
 
 ## Contributing
 
