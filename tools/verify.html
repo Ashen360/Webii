@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Webii · tracker verification</title>
+    <style>
+      body { font: 13px/1.4 ui-monospace, Consolas, monospace; margin: 16px; background: #f3f2ee; color: #1e2330; }
+      .grid { display: flex; flex-wrap: wrap; gap: 12px; }
+      figure { margin: 0; background: #fff; padding: 8px; border-radius: 12px; }
+      canvas { width: 260px; display: block; border-radius: 8px; }
+      figcaption { white-space: pre; margin-top: 6px; }
+    </style>
+  </head>
+  <body>
+    <h3>Tracker verification (dev only)</h3>
+    <pre id="summary">loading…</pre>
+    <div class="grid" id="grid"></div>
+    <script type="module" src="./verify.ts"></script>
+  </body>
+</html>

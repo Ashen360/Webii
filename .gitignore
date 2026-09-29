@@ -1,0 +1,7 @@
+node_modules
+dist
+public/mediapipe
+calibration-data
+
+# Local agent/editor settings
+.claude/settings.local.json
