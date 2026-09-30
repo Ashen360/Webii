@@ -46,6 +46,8 @@ function calibrationRecorder(): Plugin {
 }
 
 export default defineConfig({
+  // Relative base: the same build works at a domain root or under a sub-path (GitHub Pages).
+  base: './',
   server: { port: 5178, strictPort: true },
   plugins: [calibrationRecorder()],
   test: { include: ['tests/**/*.test.ts'] },

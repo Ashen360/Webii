@@ -2,6 +2,8 @@
 
 A tiny console in your browser. Your webcam is the controller.
 
+**Live:** https://ashen360.github.io/Webii/ (desktop with a webcam recommended; HTTPS is required for camera access)
+
 Raise a hand: your index finger moves a cursor and a pinch selects. Onboarding teaches the gesture, then a Wii-inspired menu offers **Games** (Catch, Slice, Memory Trace), **Portfolio**, and **Settings**. Everything runs client-side in a static site — no backend, no accounts.
 
 ## Overview
@@ -89,6 +91,11 @@ Calibration is also reachable from the status pill and the debug panel.
 | Portfolio URL | `src/config.ts` → `PORTFOLIO_URL` | `https://ashens-web.netlify.app/` |
 | Dev server port | `vite.config.ts` → `server.port` | `5178` (`strictPort`) |
 | Calibration recordings | `vite.config.ts` dev middleware | saved to `calibration-data/` (gitignored; derived numbers only, never images) |
+| Base path | `vite.config.ts` → `base` | `./` (relative, so the build works at a domain root or under `/Webii/`) |
+
+### Deployment
+
+`.github/workflows/pages.yml` builds and deploys to GitHub Pages on every push to `main`. The build step downloads the hand model, so no large files are committed. In the repository settings, set **Pages → Source** to **GitHub Actions**.
 
 Settings, the onboarding flag, and best scores persist in `localStorage`.
 
