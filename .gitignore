@@ -4,4 +4,16 @@ public/mediapipe
 calibration-data
 
 # Local agent/editor settings
-.claude/settings.local.json
+.claude/
+
+# Private working notes and agent context: never publish
+docs/
+HANDOFF*.md
+SEED*.md
+PROGRESS*.md
+TODO*.md
+CODEBASE.md
+CLAUDE.md
+
+# Personal hand photos used by the ?fake dev camera and tools/verify (local only)
+tests/fixtures/

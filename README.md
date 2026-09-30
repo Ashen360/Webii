@@ -73,7 +73,7 @@ Start → onboarding on your first visit → the console menu: **Games · Portfo
 |--------------|--------|
 | `` ` `` | Toggle the debug panel (live readouts and tuning sliders, saved locally) |
 | `?debug` | Open the debug panel at startup |
-| `?fake` | Dev only: replace the webcam with a moving hand photo, so the real pipeline runs without a camera |
+| `?fake` | Dev only: replace the webcam with a moving hand photo, so the real pipeline runs without a camera (needs local photos, see below) |
 | `?fake=calib` | Scripted calibration scenario for the simulated camera |
 | `?calibrate` | Start in calibration; in dev, each run is saved to `calibration-data/` |
 | `?clicktest` | Open the click-test harness (optional `?label=…`) |
@@ -81,6 +81,8 @@ Start → onboarding on your first visit → the console menu: **Games · Portfo
 | `?board` | Phase 2 interaction test board instead of the shell |
 | `?game=demo` | Dev only: load the demo game |
 | `/tools/verify.html` | Run the real tracker on the photos in `tests/fixtures/` |
+
+`?fake` and `/tools/verify.html` read hand photos from `tests/fixtures/` (`pointing_up.jpg`, `fist.jpg` and others). That folder is gitignored and not published: add your own photos there to use these tools. The unit tests don't need them.
 
 Calibration is also reachable from the status pill and the debug panel.
 
@@ -130,7 +132,7 @@ webii/
 ├── public/
 │   ├── media/              portfolio preview (committed)
 │   └── mediapipe/          WASM + hand model (gitignored, generated)
-├── tests/                  Vitest unit tests and fixture photos
+├── tests/                  Vitest unit tests (fixture photos are local only, gitignored)
 ├── tools/                  verify.html + verify.ts — run the tracker over fixture photos
 ├── index.html
 ├── vite.config.ts
